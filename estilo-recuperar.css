@@ -6,7 +6,7 @@ main{
     display: inline-block;
     text-align: center;
 }
-button{
+.icono{
     width: 30px;
     border-radius: 100px;
     font-size: 100%;
@@ -14,3 +14,4 @@ button{
 .recuperar{
     font: left;
 }
+

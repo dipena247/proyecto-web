@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Recuperar Contraseña</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="estilo-recuperar.css">
     <script src="https://kit.fontawesome.com/52da7d9bfc.js" crossorigin="anonymous"></script>
 </head>
@@ -28,11 +29,18 @@
         </nav>
     </header>
     <main>
-        <div class="recuperar" id="icono">
-            <button><i class="far fa-envelope"></i></button>
-        </div>
-        <div class="recuperar" id="recuperar">
+      <div class="container">
+        <div class="row">
+          <div class="col-m">
+            <button class="icono"><i class="far fa-envelope"></i> </button>
+          </div>
+          <div class="col-sm">
             <h1>Recuperar contraseña</h1>
+          </div>
+        </div>
+      </div>
+        <div class="recuperar" id="recuperar">
+           
             <form >
                 <!-- nombre -->
                 <label for="nombre">Nombre de usuario</label>
@@ -46,10 +54,12 @@
                 <input type="email" placeholder="correo@xxx.xxx">
                 <br>
                 <br>
-                <input type="submit" value="Recuperar">
+                <button type="submit" class="btn btn-primary">Recuperar</button>
             </form>
 
         </div>
     </main>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+	  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
