@@ -1,0 +1,18 @@
+form {
+	margin:0 auto; 
+	padding: 2% 30%;
+}
+
+.container {
+	padding-top: 2%;
+}
+
+.verBlog {
+	display: inline-block;
+	margin: 0.5%;
+}
+
+.cuerpoBlog {
+	display: inline-block;
+	margin: 0.5%;
+}
