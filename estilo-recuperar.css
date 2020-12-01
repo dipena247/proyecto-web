@@ -6,6 +6,11 @@ main{
     display: inline-block;
     text-align: center;
 }
-img{
-    width: 30px; 
+button{
+    width: 30px;
+    border-radius: 100px;
+    font-size: 100%;
+}
+.recuperar{
+    font: left;
 }
