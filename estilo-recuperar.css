@@ -1,0 +1,11 @@
+main{
+    margin: 0%;
+    padding: 2% 30%;
+}
+.menu li {
+    display: inline-block;
+    text-align: center;
+}
+img{
+    width: 30px; 
+}
