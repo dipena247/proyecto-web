@@ -6,11 +6,12 @@ main{
     display: inline-block;
     text-align: center;
 }
-button{
-    width: 30px;
+.icono{
+    width: 40px;
     border-radius: 100px;
     font-size: 100%;
 }
 .recuperar{
     font: left;
 }
+
