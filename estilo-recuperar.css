@@ -1,15 +1,13 @@
 main{
-    margin: 0%;
-    padding: 2% 30%;
+    margin: 0 auto; 
+    padding: 6% 30%;
 }
-.menu li {
-    display: inline-block;
-    text-align: center;
-}
+
 .icono{
-    width: 40px;
+    width: 30px;
     border-radius: 100px;
-    font-size: 100%;
+    font-size: 165%;
+    margin-top: 13px;
 }
 .recuperar{
     font: left;
