@@ -1,14 +1,11 @@
 body{
-	background: url(../image/fondo3.jpg) no-repeat ;
+	background: url(img/fondo3.jpg) no-repeat ;
 	background-size: cover;
 	}
 
 form {
 	margin:0 auto; 
 	padding: 2% 30%;
-}
-.main{
-	width: 20px;
 }
 .container {
 	position: relative;
@@ -19,12 +16,12 @@ form {
 .modificar{
 	padding-top: 1%;
 	padding: 0%;
-	width: 850px;
+	width: 700px;
 	margin-right: 90%;
 	margin-right: 90%;
 	position: relative;
-	top: 30px;
-	left: 190%;
+	top: 50px;
+	left: 190px;
 }
 .nav{
 	width: 100%;
@@ -87,7 +84,16 @@ form {
 	margin-right: 90%;
 	position: relative;
 	top: -150px;
-	left: -30%;
+	left: -20%;
+}
+
+footer{
+	margin-left: 100%;
+	padding: 0%;
+	margin-right: 90%;
+	width: 60%;
+	position: relative;
+	left: -75%;
 }
 
 .fr{
@@ -146,15 +152,10 @@ form {
 }
 .registros{
 	width: 20%;
-	margin: 1;
+	margin: 0;
 	margin-bottom: 5%;
 	padding: 0;
 	position: relative;
 	top: 70px;
-	left: 0;
+	left: 40%;
 }
-
-
-
-
-
