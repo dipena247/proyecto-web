@@ -11,14 +11,15 @@ function validar_formulario(){
         alert("Todos los campos son obligatorios")
         return false;
     }
-    else if(usuario.length == 0 || usuario.length < 5){
+    var usuario_len = usuario.value.length;
+    if(usuario_len == 0 || usuario_len < 5){
        alert("Su usuario debe contener más de 5 caracteres");
        passid.focus();
     }
-    
+
     var formatoCorreo = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
     if(!correo.value.match(formatoCorreo)){
-       alert("El correo electronico debe ser valido!");
+       alert("El correo electronico debe ser válido!");
        correo.focus();
     }
 
@@ -30,10 +31,10 @@ function validar_formulario(){
     
 }
 
-// function showForm(){
-//     document.getElementById('inicio').style.display = "block";
-// }
+function showForm(){
+    document.getElementById('inicio').style.display = "block";
+}
 
-// function hideForm(){
-//     document.getElementById('inicio').style.display = "none";
-// }
+function hideForm(){
+    document.getElementById('inicio').style.display = "none";
+}
