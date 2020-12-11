@@ -27,6 +27,7 @@ def registro():
                 # error = "El usuario debe ser alfanumerico o incluir solo '.','_','-'"
                 # flash(error)
                 MessageBox.showinfo("Hola!","El usuario debe ser alfanumerico o incluir solo '.','_','-'")
+
                 return render_template('registro.html')
 
             if not utils.isPasswordValid(password):
@@ -36,7 +37,7 @@ def registro():
                 return render_template('registro.html')
 
             if not utils.isEmailValid(email):
-                error = 'Correo invalido'
+                error = 'Correo inválido'
                 flash(error)
                 MessageBox.showinfo("Hola!","Correo invalido")
                 return render_template('registro.html')
