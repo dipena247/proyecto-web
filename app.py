@@ -17,6 +17,7 @@ def registro():
         if request.method =='POST':
             user= request.form['usuario']
             password = request.form['contrasena']
+            conf_password = request.form['conf_contrasena']
             email = request.form['correo']
             error = None
 
@@ -34,6 +35,12 @@ def registro():
                 error = 'Correo invalido'
                 flash(error)
                 return render_template('registro.html')
+
+            if not password == conf_password:
+                error = 'Las contraseñas no coinciden'
+                flash(error)
+                return render_template('registro.html')
+
             yag = yagmail.SMTP('pruebamintic2022', 'Jmd12345678') 
             yag.send(to=email, subject='Activa tu cuenta',
                      contents='Muchas gracias por elegirnos, por favor usa este link para activar tu cuenta ')
