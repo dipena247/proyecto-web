@@ -1,69 +1,34 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-	<meta charset="UTF-8">
-	<title>Blogs App - Registro</title>
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='estilos.css') }}">
-	<script src="{{ url_for('static', filename='js/validacion.js') }}"></script>
-</head>
-<body>
-	<header>
-		<nav class="navbar navbar-expand-lg navbar-light bg-light nav">
-		  <div class="collapse navbar-collapse" id="navbarNav">
-		    <ul class="navbar-nav">
-				<li class="nav-item">
-					<i><a class="nav-link" href='/'>Inicio</a></i>
-				  </li>
-				  <li class="nav-item ">
-					<i><a class="nav-link" href='/registro'>Registro<span class="sr-only">(current)</span></a></i>
-				  </li>
-				  <li class="nav-item">
-					<i><a class="nav-link" href='/miCuenta'>Mi cuenta</a></i>
-				</li>
-		    </ul>
-		  </div>
-		</nav>
-	</header>
-	<main>
-		<form name="Formulario" method="POST" action="{{ url_for('registro')}}" class="registros">
-		  <div class="form-group">
-		    <label for="usuario">Usuario</label>
-		    <input type="text" class="form-control" name="usuario" id="usuario" required>
-		  </div>
-		  <div class="form-group">
-		    <label for="nombre">Nombre</label>
-		    <input type="text" class="form-control" name="nombre" id="nombre" required>
-		  </div>
-		  <div class="form-group">
-		    <label for="apellido">Apellido</label>
-		    <input type="text" class="form-control" name="apellido" id="apellido" required>
-		  </div>
-		  <div class="form-group">
-		    <label for="correo">Correo</label>
-		    <input type="email" class="form-control" name="correo" id="correo" required>
-		  </div>
-		  <div class="form-group">
-		    <label for="telefono">Teléfono</label>
-		    <input type="number" class="form-control" name="telefono" id="telefono" required>
-		  </div>
-		  <div class="form-group">
-		    <label for="contrasena">Contraseña</label>
-			<input type="password" class="form-control" name="contrasena" id="contrasena" required>
-		  </div>
-		  <div class="form-group">
-		    <label for="conf_contrasena">Confirmar contraseña</label>
-			<input type="password" class="form-control" name="conf_contrasena" id="conf_contrasena" required>
-		  </div>
-		  <button type="submit" class="btn btn-primary" value="Registrarse">Registro</button>
-		</form>
-	</main>
-	<footer class="footer mt-auto py-3">
-        <div class="container">
-            <span class="text-muted">Misión TIC 2020 - Universidad del Norte - Grupo 14F © 2020</span>
-        </div>
-    </footer>
-	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
+{% extends 'base/base.html' %} {% block titulo %} Blogs App - Registro {% endblock %} {% block scripts %}
+<script src="{{ url_for('static', filename='js/validacion.js') }}"></script>{% endblock %} {% block main %}
+<form name="Formulario" method="POST" action="{{ url_for('registro')}}" class="registros">
+    <div class="form-group">
+        <label for="usuario">Usuario</label>
+        <input type="text" class="form-control" name="usuario" id="usuario" required>
+    </div>
+    <div class="form-group">
+        <label for="nombre">Nombre</label>
+        <input type="text" class="form-control" name="nombre" id="nombre" required>
+    </div>
+    <div class="form-group">
+        <label for="apellido">Apellido</label>
+        <input type="text" class="form-control" name="apellido" id="apellido" required>
+    </div>
+    <div class="form-group">
+        <label for="correo">Correo</label>
+        <input type="email" class="form-control" name="correo" id="correo" required>
+    </div>
+    <div class="form-group">
+        <label for="telefono">Teléfono</label>
+        <input type="number" class="form-control" name="telefono" id="telefono" required>
+    </div>
+    <div class="form-group">
+        <label for="contrasena">Contraseña</label>
+        <input type="password" class="form-control" name="contrasena" id="contrasena" required>
+    </div>
+    <div class="form-group">
+        <label for="conf_contrasena">Confirmar contraseña</label>
+        <input type="password" class="form-control" name="conf_contrasena" id="conf_contrasena" required>
+    </div>
+    <button type="submit" class="btn btn-primary" value="Registrarse">Registro</button>
+</form>
+{% endblock %}
