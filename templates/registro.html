@@ -1,6 +1,6 @@
 {% extends 'base/base.html' %} {% block titulo %} Blogs App - Registro {% endblock %} {% block scripts %}
 <script src="{{ url_for('static', filename='validacion.js') }}"></script>{% endblock %} {% block main %}
-<form name="Formulario" method="POST" action="{{ url_for('registro')}}" class="registros">
+<form name="Formulario" method="POST" action="{{ url_for('registro')}}" class="registros" onsubmit="validar_formulario()" >
     <div class="form-group">
         <label for="usuario">Usuario</label>
         <input type="text" class="form-control" name="usuario" id="usuario" >

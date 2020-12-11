@@ -1,11 +1,11 @@
 function validar_formulario(){
-    var usuario = document.getElementsByName("usuario").values;
-    var correo = document.getElementsByName("correo").values;
-    var clave = document.getElementsByName("contrasena").values;
-    var conf_clave = document.getElementsByName("conf_contrasena").values;
-    var nombre = document.getElementsByName("nombre").values;
-    var apellido = document.getElementsByName("apellido").values;
-    var telefono = document.getElementsByName("telefono").values;
+    var usuario = document.getElementById("usuario").value;
+    var correo = document.getElementById("correo").value;
+    var clave = document.getElementById("contrasena").value;
+    var conf_clave = document.getElementById("conf_contrasena").value;
+    var nombre = document.getElementById("nombre").value;
+    var apellido = document.getElementById("apellido").value;
+    var telefono = document.getElementById("telefono").value;
     
     if (usuario=="" || correo=="" || clave=="" ||nombre=="" || apellido=="" || telefono=="" || conf_clave==""){
         alert("Todos los campos son obligatorios")
@@ -31,10 +31,10 @@ function validar_formulario(){
     
 }
 
-// function showForm(){
-//     document.getElementById('inicio').style.display = "block";
-// }
+function showForm(){
+    document.getElementById('inicio').style.display = "block";
+}
 
-// function hideForm(){
-//     document.getElementById('inicio').style.display = "none";
-// }
+function hideForm(){
+    document.getElementById('inicio').style.display = "none";
+}
