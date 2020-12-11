@@ -31,10 +31,10 @@ function validar_formulario(){
     
 }
 
-function showForm(){
-    document.getElementById('inicio').style.display = "block";
-}
+// function showForm(){
+//     document.getElementById('inicio').style.display = "block";
+// }
 
-function hideForm(){
-    document.getElementById('inicio').style.display = "none";
-}
+// function hideForm(){
+//     document.getElementById('inicio').style.display = "none";
+// }
