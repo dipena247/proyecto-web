@@ -10,14 +10,11 @@ app.secret_key = "super secret key"
 def inicio():
     return render_template("iniciar-sesion.html")
 
-@app.route('/registro')
-def index():
-    return render_template("registro.html")
 
 @app.route('/registro', methods=('GET','POST'))
 def registro():
-    try:
-        if request.methods=='POST':
+    
+        if request.method =='POST':
             user= request.form['usuario']
             password = request.form['contrasena']
             email = request.form['correo']
@@ -43,8 +40,7 @@ def registro():
             flash('Hemos enviado un correo para activar tu cuenta')
             return render_template('iniciar-sesion.html')
         return render_template('registro.html')
-    except:
-        return render_template('registro.html')
+
 
 @app.route('/miCuenta')
 def MiCuenta():
