@@ -18,8 +18,8 @@ def isEmailValid(email):
     return is_valid
 
 
-def isUsernameValid(username):
-    if re.search(user_reguex, username):
+def isUsernameValid(user):
+    if re.search(user_reguex, user):
         return True
     else:
         return False
