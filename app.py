@@ -43,8 +43,7 @@ def registro():
             flash('Hemos enviado un correo para activar tu cuenta')
             return render_template('iniciar-sesion.html')
         return render_template('registro.html')
-    except Exception as e:
-        print(e)
+    except:
         return render_template('registro.html')
 
 @app.route('/miCuenta')
