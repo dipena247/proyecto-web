@@ -22,17 +22,17 @@ def registro():
             error = None
 
             if not utils.isUsernameValid(user):
-                error = "El usuario debe ser alfanumerico o incluir solo '.','_','-'"
+                error = "El usuario debe ser alfanumérico o incluir solo '.','_','-'"
                 flash(error)
                 return render_template('registro.html')
 
             if not utils.isPasswordValid(password):
-                error = 'La contraseña debe contenir al menos una minúscula, una mayúscula, un número y 8 caracteres'
+                error = 'La contraseña debe contener al menos una minúscula, una mayúscula, un número y 8 caracteres'
                 flash(error)
                 return render_template('registro.html')
 
             if not utils.isEmailValid(email):
-                error = 'Correo invalido'
+                error = 'Correo inválido'
                 flash(error)
                 return render_template('registro.html')
 
