@@ -2,7 +2,7 @@ from flask import Flask, render_template, flash, request, url_for,redirect
 import yagmail as yagmail
 import utils
 import os
-
+from tkinter import *
 from tkinter import messagebox as MessageBox
 
 app = Flask(__name__)
@@ -21,32 +21,31 @@ def registro():
             password = request.form['contrasena']
             conf_password = request.form['conf_contrasena']
             email = request.form['correo']
-            error = None
+            # error = None
 
             if not utils.isUsernameValid(user):
                 # error = "El usuario debe ser alfanumerico o incluir solo '.','_','-'"
                 # flash(error)
-                MessageBox.showinfo("Hola!","El usuario debe ser alfanumerico o incluir solo '.','_','-'")
-
+                MessageBox.showinfo(title="Hola!",message="El usuario debe ser alfanumerico o incluir solo '.','_','-'")
                 return render_template('registro.html')
 
             if not utils.isPasswordValid(password):
-                error = 'La contraseña debe contener al menos una minúscula, una mayúscula, un número y 8 caracteres'
-                flash(error)
-                MessageBox.showinfo("Hola!","La contraseña debe contener al menos una minúscula, una mayúscula, un número y 8 caracteres")
+                # error = 'La contraseña debe contener al menos una minúscula, una mayúscula, un número y 8 caracteres'
+                # flash(error)
+                MessageBox.showinfo(title="Hola!", message="La contraseña debe contener al menos una minúscula, una mayúscula, un número y 8 caracteres")
                 return render_template('registro.html')
 
             if not utils.isEmailValid(email):
-                error = 'Correo inválido'
-                flash(error)
-                MessageBox.showinfo("Hola!","Correo invalido")
+                # error = 'Correo inválido'
+                # flash(error)
+                MessageBox.showinfo(title="Hola!",message="Correo invalido")
                 return render_template('registro.html')
 
-            if not password == conf_password:
-                error = 'Las contraseñas no coinciden'
-                flash(error)
-                MessageBox.showinfo("Hola!","Las contraseñas no coinciden")
-                return render_template('registro.html')
+            # if not password == conf_password:
+            #     # error = 'Las contraseñas no coinciden'
+            #     # flash(error)
+            #     MessageBox.showinfo(title="Hola!",message="Las contraseñas no coinciden")
+            #     return render_template('registro.html')
 
             yag = yagmail.SMTP('pruebamintic2022', 'Jmd12345678') 
             yag.send(to=email, subject='Activa tu cuenta',
